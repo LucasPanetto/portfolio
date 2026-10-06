@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== Analytics events (no-op if gtag is blocked) =====
+  const track = (event, params) => {
+    if (typeof window.gtag === 'function') window.gtag('event', event, params);
+  };
+
+  document.querySelectorAll('.whatsapp-float').forEach(link => {
+    link.addEventListener('click', () => track('whatsapp_click', { location: 'floating_button' }));
+  });
+
   // ===== Lead form: opens WhatsApp with a pre-filled message =====
   const form = document.getElementById('leadForm');
   if (form) {
@@ -55,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let text = `Olá, Lucas! Sou ${name} e vi seu portfólio.\nPreciso de: ${type}.`;
       if (details) text += `\nSobre o projeto: ${details}`;
 
+      // Only the project type goes to Analytics — never the name or message
+      track('generate_lead', { method: 'whatsapp_form', project_type: type });
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
     });
 
