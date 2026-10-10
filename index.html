@@ -18,8 +18,8 @@
   <meta name="description"
     content="Criação de landing pages sob medida, rápidas no celular e feitas para gerar clientes no WhatsApp. Revisões até você aprovar. Orçamento sem compromisso.">
   <meta name="author" content="Lucas Panetto">
+  <meta name="theme-color" content="#0a0a0b">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b0e14">
   <link rel="canonical" href="https://lucaspanetto.com/">
 
   <!-- Open Graph (prévia no WhatsApp, LinkedIn, Facebook) -->
@@ -75,12 +75,12 @@
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="icon" href="icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/favicon-512.png">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -90,84 +90,145 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- ===== NAVBAR (mínima: um único objetivo) ===== -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#top">Lucas<span>.</span>Panetto</a>
+      <a class="navbar-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">LP</span>Lucas Panetto
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-label="Abrir menu">
+        aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#top">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
           <li class="nav-item"><a class="nav-link" href="#como-funciona">Como funciona</a></li>
           <li class="nav-item"><a class="nav-link" href="#duvidas">Dúvidas</a></li>
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-gradient btn-sm px-4" href="#orcamento">Pedir orçamento</a>
-          </li>
         </ul>
+        <a class="btn btn-red btn-sm nav-cta" href="#orcamento">Pedir orçamento <i class="bi bi-arrow-right ms-1"></i></a>
       </div>
     </div>
   </nav>
 
   <!-- ===== 1. HERO ===== -->
-  <header class="hero d-flex align-items-center" id="top">
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
-    <div class="hero-grid"></div>
+  <header class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
 
-    <div class="container position-relative py-5">
-      <div class="row align-items-center g-4 g-lg-5">
-        <div class="col-lg-6" data-aos="fade-up">
-          <span class="badge-pill mb-4"><i class="bi bi-circle-fill"></i> Agenda aberta para novos projetos</span>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="badge-pill mb-4"><span class="badge-dot"></span> Landing pages para pequenos negócios</span>
           <h1 class="hero-title mb-4">
-            Landing pages que fazem seu cliente <span class="text-gradient">chamar no WhatsApp.</span>
+            Páginas que vendem.<br><span class="text-red">Clientes no WhatsApp.</span>
           </h1>
-          <p class="hero-subtitle mb-4">
-            Página sob medida, rápida no celular e escrita para converter — com revisões
-            ilimitadas até você aprovar o layout.
+          <p class="hero-subtitle mb-5">
+            Eu crio landing pages sob medida, rápidas no celular e com texto escrito para vender.
+            Revisões até você aprovar o layout.
           </p>
-          <div class="d-flex flex-wrap gap-3 mb-4">
-            <a href="#orcamento" class="btn btn-gradient btn-lg px-4">
-              <i class="bi bi-whatsapp me-2"></i>Pedir meu orçamento
-            </a>
-            <a href="#projetos" class="btn btn-ghost btn-lg px-4">Ver projetos no ar</a>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#orcamento" class="btn btn-red btn-lg">Pedir orçamento <i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#projetos" class="btn btn-outline btn-lg">Ver projetos <i class="bi bi-arrow-right ms-2"></i></a>
           </div>
-          <ul class="hero-reassure">
-            <li><i class="bi bi-check2"></i> Orçamento sem compromisso</li>
-            <li><i class="bi bi-check2"></i> Revisões até aprovar</li>
-            <li><i class="bi bi-check2"></i> Atendimento em todo o Brasil</li>
-          </ul>
         </div>
 
-        <!-- Prova acima da dobra: um projeto real no lugar de um mockup genérico -->
-        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
-          <div class="hero-showcase">
-            <div class="browser">
-              <div class="browser-bar">
-                <span></span><span></span><span></span>
-                <div class="browser-url">formattecformaturas.com</div>
-              </div>
-              <img src="assets/projects/formattec-shot-1.jpg" alt="Landing page da Formattec Formaturas"
-                width="1200" height="750">
+        <!-- Palco: projeto real sobre a plataforma, com cards flutuantes -->
+        <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+          <div class="stage" aria-hidden="true">
+            <div class="stage-ring ring-1"></div>
+            <div class="stage-ring ring-2"></div>
+
+            <div class="stage-device">
+              <div class="device-bar"><span></span><span></span><span></span></div>
+              <img src="assets/projects/chale-shot-1.jpg" width="1100" height="688" alt="">
             </div>
-            <div class="hero-quote">
-              <i class="bi bi-quote"></i>
-              <p>“Em duas semanas já tínhamos resultado em conversão.”</p>
-              <span>Formattec Formaturas</span>
+
+            <div class="stage-platform">
+              <div class="platform-top"></div>
+              <div class="platform-core"></div>
+            </div>
+
+            <div class="float-card fc-chat">
+              <div class="fc-head"><i class="bi bi-whatsapp"></i> WhatsApp</div>
+              <div class="chat-bubble">Olá! Vi sua página e quero reservar.</div>
+            </div>
+
+            <div class="float-card fc-flow">
+              <div class="fc-head">Estrutura</div>
+              <div class="flow">
+                <span class="node"><i class="bi bi-layout-text-window"></i></span>
+                <span class="link"></span>
+                <span class="node"><i class="bi bi-star"></i></span>
+                <span class="link"></span>
+                <span class="node node-red"><i class="bi bi-chat-dots"></i></span>
+              </div>
+              <div class="flow-labels"><span>Oferta</span><span>Prova</span><span>Contato</span></div>
+            </div>
+
+            <div class="float-card fc-mobile">
+              <div class="fc-head">Mobile</div>
+              <div class="ring-chart"><i class="bi bi-phone"></i></div>
+              <span class="fc-note">Feito para o celular</span>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Fileira de cards (benefícios) -->
+      <div class="row g-3 feature-row">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+          <a class="feature-card is-active" href="#projetos">
+            <span class="feature-icon"><i class="bi bi-window-sidebar"></i></span>
+            <h3>Página sob medida</h3>
+            <p>Layout com a cara da sua marca, nada de template genérico.</p>
+            <span class="feature-arrow"><i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+          <a class="feature-card" href="#como-funciona">
+            <span class="feature-icon"><i class="bi bi-pencil-square"></i></span>
+            <h3>Texto que vende</h3>
+            <p>Diz o que você faz e para quem logo na primeira tela.</p>
+            <span class="feature-arrow"><i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+          <a class="feature-card" href="#como-funciona">
+            <span class="feature-icon"><i class="bi bi-lightning-charge"></i></span>
+            <h3>Rápida no celular</h3>
+            <p>Código próprio e imagens otimizadas, sem plugin pesado.</p>
+            <span class="feature-arrow"><i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+          <a class="feature-card" href="#orcamento">
+            <span class="feature-icon"><i class="bi bi-whatsapp"></i></span>
+            <h3>Direto no WhatsApp</h3>
+            <p>Botões de contato no ponto em que a pessoa decide.</p>
+            <span class="feature-arrow"><i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faixa de clientes -->
+    <div class="clients">
+      <div class="horizon" aria-hidden="true"></div>
+      <div class="container text-center">
+        <p class="clients-label">Projetos entregues para</p>
+        <ul class="clients-row">
+          <li class="client client-serif">Chalé <em>Entardecer</em></li>
+          <li class="client"><i class="bi bi-mortarboard"></i> Formattec Formaturas</li>
+          <li class="client"><i class="bi bi-trophy"></i> Formattec App</li>
+        </ul>
       </div>
     </div>
   </header>
@@ -249,47 +310,6 @@
               </div>
             </li>
           </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 4. BENEFÍCIOS ===== -->
-  <section class="section-padding" id="beneficios">
-    <div class="container">
-      <div class="text-center mb-5" data-aos="fade-up">
-        <span class="eyebrow">O que muda para você</span>
-        <h2 class="section-title">Menos visitante perdido, mais conversa começando</h2>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-eye"></i></div>
-            <h5>Entendem você em 5 segundos</h5>
-            <p>Headline e hierarquia visual que dizem o que você faz e para quem, logo na primeira tela.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
-            <h5>Abre rápido no celular</h5>
-            <p>Código próprio, imagens otimizadas e nada de plugin pesado atrasando o carregamento.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-signpost-split"></i></div>
-            <h5>Um caminho claro até o contato</h5>
-            <p>O botão de contato aparece de novo depois de cada prova, no ponto em que a pessoa decide.</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="bi bi-palette2"></i></div>
-            <h5>A cara da sua marca</h5>
-            <p>Nada de template genérico. A identidade visual é feita para o seu negócio.</p>
-          </div>
         </div>
       </div>
     </div>
